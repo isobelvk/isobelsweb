@@ -12,7 +12,7 @@ header{
     justify-content: space-evenly;
     align-items: center;
     margin-top: 30px;
-    position: static;
+    
    
    
 
@@ -92,20 +92,17 @@ body{
     margin-left: 10px;
     margin-right: 10px;
     margin-bottom: 50px;
+    height: 100vh
 
 }
-main{
-    margin: 0px;
-}
+
 
 .container{
     display: flex;
     flex-direction: row;
     justify-content: center;
-    
-    height: 90vh;
+    height: auto;
     flex-wrap: wrap;
-    overflow: auto;
     gap: 20px;
     padding: 20px;
     margin-left: auto;

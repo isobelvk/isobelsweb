@@ -119,6 +119,7 @@ audio[controls]{
     justify-content: space-evenly;
     justify-content: center;
     gap:5px;
+    height: 40%;
 
 }
 #hub1{
@@ -133,6 +134,7 @@ audio[controls]{
     font-family: pixel;
     font-size:medium;
     padding:5px;
+    overflow: auto;
 }
 
 #hub2{
@@ -147,6 +149,7 @@ audio[controls]{
     font-family: pixel;
     font-size:medium;
     padding:5px;
+    overflow: auto;
 }
 
 

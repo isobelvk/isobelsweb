@@ -72,6 +72,12 @@ h1 a{
     .navbar a{
         padding: 5px;
     }
+    .box{
+        padding: 10px;
+   }
+   .container{
+        padding: 10px;
+   }
 
 }
 

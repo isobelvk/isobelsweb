@@ -51,7 +51,7 @@ main{
     border: 0px;
     border-radius: 20px;
     width: 300px;
-    min-height: 50vh;
+    min-height: 70vh;
     font-size: 1em;
     font-family: roboto-mono, 'courier new';
     color:greenyellow;
@@ -239,12 +239,10 @@ h1 a{
     .navbar a{
         padding: 5px;
     }
-     body{
+    body{
         margin-left: 20px;
         margin-right: 20px;
     }
-   
-
 
 }
 
@@ -310,8 +308,6 @@ footer a{
      display: block;
      text-align: center;
 }
-footer:hover{
-    transform:scale(1.01);
-    margin-left: 1px;
-    margin-right: 1px;
+footer a:hover{
+    transform:scale(1.05);
 }

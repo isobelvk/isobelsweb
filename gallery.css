@@ -72,12 +72,6 @@ h1 a{
     .navbar a{
         padding: 5px;
     }
-    .box{
-        padding: 10px;
-   }
-   .container{
-        padding: 10px;
-   }
 
 }
 
@@ -166,6 +160,13 @@ body{
    .gallery{
         width: 90%;
    }
+   .box{
+        padding: 10px;
+   }
+   .container{
+        padding: 10px;
+   }
+ 
     
 
 }
@@ -222,8 +223,6 @@ footer a{
      display: block;
      text-align: center;
 }
-footer:hover{
-    transform:scale(1.01);
-    margin-left: 1px;
-    margin-right: 1px;
+footer a:hover{
+    transform:scale(1.05);
 }

@@ -169,6 +169,7 @@ body{
     padding-right: 10px;
     color:tomato;
     
+    
 }
 
 h3{
@@ -210,9 +211,6 @@ footer a{
      display: block;
      text-align: center;
 }
-footer:hover{
-    transform:scale(1.01);
-    margin-left: 1px;
-    margin-right: 1px;
+footer a:hover{
+    transform:scale(1.05);
 }
-

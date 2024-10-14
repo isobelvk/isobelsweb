@@ -72,6 +72,7 @@ h1 a{
     .navbar a{
         padding: 5px;
     }
+   
 
 }
 
@@ -92,6 +93,7 @@ body{
     margin-bottom: 50px;
 
 }
+
 @media (max-width: 1100px) {
     
     body{
@@ -106,7 +108,7 @@ body{
 .container{
     display: flex;
     flex-direction: row;
-    
+    justify-content: center;
     
     height:110vh;
     flex-wrap: wrap;
@@ -119,13 +121,36 @@ body{
     
 
 }
+.menu{
+    height: 5%;
+    width: 100%;
+   
+    font-family: pixel, 'courier new';
+    color:rgb(0, 0, 0);
+    border: 0px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 5px;
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
 
+@media (max-width: 600px){
+    .menu{
+        height: 10%;
+    }
+}
 .box{
     
     border: 0px;
     border-radius: 20px;
     height: 100vh;
-    width: 500px;
+    width: 100%;
     font-size: 1em;
     font-family: pixel, 'courier new';
     color:rgb(0, 0, 0);
@@ -142,17 +167,32 @@ body{
 
 }
 
+button{
+    height: 40px;
+    padding: 10px;
+    border-radius: 10px;
+    border: 1px solid;
+    font-family: pixel;
+    font-size: 1em;
+    background: none; 
+}
+button:hover{
+    transform:scale(1.05);
+    background-color: rgba(224, 224, 224, 0.858);
+}
+
 
 .gallery{
-    display: inline-block;
-    flex-direction: row;
-    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     border: 1px solid whitesmoke;
     box-shadow: 1px 1px 1px rgb(61, 61, 61);
     border-radius: 5px;
     padding:10px;
     background-color: white;
-    margin: 5px;
+    margin: 10px auto;;
     width: 70%;
 }
 
@@ -201,6 +241,9 @@ body{
 #box1{
     flex-grow: 1;
     
+}
+.show {
+    display: block; 
 }
 
 footer{

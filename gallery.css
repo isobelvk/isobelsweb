@@ -1,74 +1,79 @@
 @font-face {
     font-family: pixel;
-    src: url(fonts/px10.ttf);
+    src: url(fonts/px10.ttf)
 }
 
-* {
+*{
     box-sizing: border-box;
 }
-
-body {
-    font-family: pixel;
-    color: yellowgreen;
-    margin: 0 200px 50px;
-}
-
-header {
+header{
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
     align-items: center;
     margin-top: 50px;
+   
+
 }
 
-h1 {
+h1{
     font-family: pixel, 'Courier New', Courier, monospace;
-    color: greenyellow;
+    color:greenyellow;
     font-size: 50px;
-    font-weight: 100;
+    font-weight:100;
     text-shadow: 1px 1px 2px black;
     text-align: center;
+   
 }
 
-h1:hover {
-    transform: scale(1.1);
+h1:hover{
+    transform:scale(1.1)
 }
-
-h1 a {
-    color: greenyellow;
+h1 a{
+    color:greenyellow;
     text-decoration: none;
     padding: 20px;
     display: block;
     text-align: center;
 }
 
-.navbar {
+
+.navbar{
     font-family: pixel, 'Courier New', Courier, monospace;
-    list-style-type: none;
+    list-style-type:none;
     border: solid yellowgreen;
-    border-radius: 20px;
+    border-radius:20px;
     box-shadow: 1px 1px 5px rgb(23, 23, 23);
     text-align: center;
     overflow: hidden;
+    justify-content: center;
     margin-bottom: 10px;
+   
 }
-
-.navbar li {
-    float: left;
-}
-
-.navbar a {
-    color: greenyellow;
+.navbar a{
+    color:greenyellow;
     text-decoration: none;
     padding: 20px;
     display: block;
+    text-align: center;
     text-shadow: 1px 1px 2px black;
-    transition: background-color 0.3s, transform 0.3s;
+}
+.navbar a:hover{
+    background-color: rgba(153, 205, 50, 0.344);
+    transform:scale(1.2)
+}
+.navbar li{
+    float:left;
+
 }
 
-.navbar a:hover {
-    background-color: rgba(153, 205, 50, 0.344);
-    transform: scale(1.2);
+@media (max-width: 600px) {
+    
+    .navbar a{
+        padding: 5px;
+    }
+   
+
 }
 
 .video-bg {
@@ -78,59 +83,91 @@ h1 a {
     left: 0;
     min-width: 100%;
     min-height: 100%;
+
+}
+body{
+    font-family: pixel;
+    color:yellowgreen;
+    margin-left: 200px;
+    margin-right: 200px;
+    margin-bottom: 50px;
+
 }
 
-.container {
+@media (max-width: 1100px) {
+    
+    body{
+        margin-left: 0px;
+        margin-right: 0px;
+        margin-bottom: 50px;
+    }
+
+}
+
+
+.container{
     display: flex;
     flex-direction: row;
     justify-content: center;
-    height: 110vh;
+    
+    height:110vh;
     flex-wrap: wrap;
     overflow: auto;
     gap: 20px;
-    padding: 20px 5%;
-}
+    padding: 20px;
+    margin-left: 5%;
+    margin-right: 5%;
 
-.menu {
+    
+
+}
+.menu{
     height: 5%;
     width: 100%;
-    font-family: pixel, 'Courier New';
-    color: rgb(0, 0, 0);
+   
+    font-family: pixel, 'courier new';
+    color:rgb(0, 0, 0);
+    border: 0px;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
     gap: 5px;
     text-align: center;
-    margin: 20px 0;
-    padding: 0 20px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
 }
 
-.box {
+@media (max-width: 600px){
+    .menu{
+        height: 10%;
+    }
+}
+.box{
+    
+    border: 0px;
     border-radius: 20px;
     height: 100vh;
     width: 100%;
+    font-size: 1em;
+    font-family: pixel, 'courier new';
+    color:rgb(0, 0, 0);
     font-size: medium;
-    font-family: pixel, 'Courier New';
-    color: rgb(0, 0, 0);
-    font-weight: 100;
+    font-weight:100;
     box-shadow: 1px 1px 5px rgb(23, 23, 23);
     overflow: auto;
     background-color: rgba(0, 0, 0, 0.742);
     background-image: url(images/paper.jpeg);
-    background-repeat: no-repeat;
+    background-repeat:no-repeat;
     background-size: cover;
     padding: 20px;
     text-align: center;
-    transition: transform 0.3s, margin 0.3s;
+
 }
 
-.box:hover {
-    transform: scale(1.01);
-    margin: 1px;
-}
-
-button {
+button{
     height: 40px;
     padding: 10px;
     border-radius: 10px;
@@ -138,15 +175,14 @@ button {
     font-family: pixel;
     font-size: 1em;
     background: none; 
-    transition: transform 0.3s, background-color 0.3s;
 }
-
-button:hover {
-    transform: scale(1.05);
+button:hover{
+    transform:scale(1.05);
     background-color: rgba(224, 224, 224, 0.858);
 }
 
-.gallery {
+
+.gallery{
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -154,83 +190,82 @@ button:hover {
     border: 1px solid whitesmoke;
     box-shadow: 1px 1px 1px rgb(61, 61, 61);
     border-radius: 5px;
-    padding: 10px;
+    padding:10px;
     background-color: white;
-    margin: 10px auto;
+    margin: 10px auto;;
     width: 70%;
 }
 
-.gallery:hover {
-    border: 1px solid darkgray;
-}
+@media (max-width: 600px) {
+   .gallery{
+        width: 90%;
+   }
+   .box{
+        padding: 10px;
+   }
+   .container{
+        padding: 10px;
+   }
+ 
+    
 
-.gallery img,
-.gallery video {
-    width: 100%;
-    height: auto;
 }
-
-.gallery .description {
+.gallery .description{
     padding: 10px;
     text-align: left;
 }
 
-#box1 {
-    flex-grow: 1;
+.gallery:hover{
+    border: 1px solid darkgray;
 }
 
+.gallery img{
+    width: 100%;
+    height: auto;
+    
+    
+}
+.gallery video{
+    width: 100%;
+    height: auto;
+    
+    
+}
+
+.box:hover{
+    transform:scale(1.01);
+    margin-left: 1px;
+    margin-right: 1px;
+}
+
+#box1{
+    flex-grow: 1;
+    
+}
 .show {
     display: block; 
 }
 
-footer {
-    font-family: pixel, 'Courier New';
-    color: greenyellow;
+footer{
+    font-family: pixel, 'courier new';
+    color:greenyellow;
     font-size: small;
-    font-weight: 100;
+    font-weight:100;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
     align-items: center;
     padding: 20px;
     text-shadow: 1px 1px 2px black;
+    
 }
-
-footer a {
-    color: greenyellow;
-    text-decoration: none;
-    padding: 20px;
-    display: block;
-    text-align: center;
-    transition: transform 0.3s;
+footer a{
+     color:greenyellow;
+     text-decoration: none;
+     padding: 20px;
+     display: block;
+     text-align: center;
 }
-
-footer a:hover {
-    transform: scale(1.05);
-}
-
-@media (max-width: 1100px) {
-    body {
-        margin: 0;
-    }
-}
-
-@media (max-width: 600px) {
-    body {
-        margin: 0;
-    }
-    .navbar a,
-    .menu {
-        padding: 5px;
-        height: 10vh;
-    }
-    .gallery {
-        width: 90%;
-    }
-    .box {
-        padding: 10px;
-    }
-    .container {
-        padding: 10px;
-    }
+footer a:hover{
+    transform:scale(1.05);
 }

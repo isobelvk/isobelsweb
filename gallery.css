@@ -222,6 +222,7 @@ footer a:hover {
     .navbar a,
     .menu {
         padding: 5px;
+        height: 10vh;
     }
     .gallery {
         width: 90%;

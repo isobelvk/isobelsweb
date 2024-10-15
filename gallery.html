@@ -24,16 +24,18 @@
     <video autoplay muted loop src="shaoxing.mov" type="video/mov" class="video-bg" playsinline>
     </video>
     <div class="container">
-      
+        <div class="wrapper">
+        <div class="menu">
+            <button class="filter-btn active" onclick="filterSelection('all')">all</button>
+            <button class="filter-btn" onclick="filterSelection('san-francisco')">san francisco</button>
+            <button class="filter-btn" onclick="filterSelection('china')">china</button>
+            <button class="filter-btn" onclick="filterSelection('la')">los angeles</button>
+            <button class="filter-btn" onclick="filterSelection('yosemite')">yosemite</button>
+            <button class="filter-btn" onclick="filterSelection('michigan')">michigan</button>
+        </div>
+        </div>
         <div class="box" id="box1">
-            <div class="menu">
-                <button class="filter-btn active" onclick="filterSelection('all')">all</button>
-                <button class="filter-btn" onclick="filterSelection('san-francisco')">san francisco</button>
-                <button class="filter-btn" onclick="filterSelection('china')">china</button>
-                <button class="filter-btn" onclick="filterSelection('la')">los angeles</button>
-                <button class="filter-btn" onclick="filterSelection('yosemite')">yosemite</button>
-                <button class="filter-btn" onclick="filterSelection('michigan')">michigan</button>
-            </div>
+            
             <div class="gallery">
                 <div class="gallery-item san-francisco">
                     <a target="_blank" href="gallery/sf cliff.jpg">
@@ -42,7 +44,7 @@
                 <div class="description">at ocean beach. when i was 18 i stumbled upon a rave here.</div>
                 </div>
             </div>
-            <div class="gallery">
+            <div class="gallery wide">
                 <div class="gallery-item san-francisco">
                     <a target="_blank" href="gallery/sf spinning.mov">
                         <video src="gallery/sf spinning.mov" type="video/mov" controls loading="lazy">
@@ -98,7 +100,7 @@
                 </div>
                 <div class="description">kinda sad cuz this deer was trapped in a cafe in chongqing.</div>
             </div>
-            <div class="gallery">
+            <div class="gallery wide">
                 <div class="gallery-item china">
                     <a target="_blank" href="gallery/hangzhou rain.mov">
                         <video src="gallery/hangzhou rain.mov" type="video/mov" controls loading="lazy">
@@ -114,7 +116,7 @@
                 </div>
                 <div class="description">my sister, lila, with a kitty in shaoxing.</div>
             </div>
-            <div class="gallery">
+            <div class="gallery tall">
                 <div class="gallery-item china">
                     <a target="_blank" href="gallery/cute couple.jpg">
                         <img src="gallery/cute couple.jpg" type="image/jpg" loading="lazy">
@@ -138,7 +140,7 @@
                 </div>
                 <div class="description">somewhere in china.</div>
             </div>
-            <div class="gallery">
+            <div class="gallery wide">
                 <div class="gallery-item china">
                     <a target="_blank" href="gallery/cat massage.mov">
                         <video src="gallery/cat massage.mov" type="video/mov" controls loading="lazy">
@@ -162,7 +164,7 @@
                 </div>
                 <div class="description">a park in hangzhou.</div>
             </div>
-            <div class="gallery">
+            <div class="gallery wide">
                 <div class="gallery-item china">
                     <a target="_blank" href="gallery/shanghai tv.mov">
                         <video src="gallery/shanghai tv.mov" type="video/mov" controls loading="lazy">
@@ -170,7 +172,7 @@
                 </div>
                 <div class="description">mom i'm on tv.</div>
             </div>
-            <div class="gallery">
+            <div class="gallery tall">
                 <div class="gallery-item china">
                     <a target="_blank" href="gallery/china fog garden.jpg">
                         <img src="gallery/china fog garden.jpg" type="image/jpg" loading="lazy">
@@ -179,6 +181,23 @@
                 <div class="description">shaoxing so beautiful!!</div>
             </div>
             <div class="gallery">
+                <div class="gallery-item china">
+                    <a target="_blank" href="gallery/china siblings.JPG">
+                        <img src="gallery/china siblings.JPG" type="image/JPG" loading="lazy">
+                    </a>
+                </div>
+                <div class="description">my siblings lila & alex.</div>
+            </div>
+            <div class="gallery">
+                <div class="gallery-item china">
+                    <a target="_blank" href="gallery/china jiu jiu.JPG.JPG">
+                        <img src="gallery/china jiu jiu.JPG" type="image/JPG" loading="lazy">
+                    </a>
+                </div>
+                <div class="description">舅舅 (uncle)... my brother looks more like him than my dad xD</div>
+            </div>
+
+            <div class="gallery tall">
                 <div class="gallery-item china">
                     <a target="_blank" href="gallery/shanghai park.jpg">
                         <img src="gallery/shanghai park.jpg" type="image/jpg" loading="lazy">
@@ -196,6 +215,14 @@
             </div>
             <div class="gallery">
                 <div class="gallery-item china">
+                    <a target="_blank" href="gallery/china foliage.JPG">
+                        <img src="gallery/china foliage.JPG" type="image/jpg" loading="lazy">
+                    </a>
+                </div>
+                <div class="description">we went to visit my grandpa's grave. this was the foliage outside of the mountain he is buried in.</div>
+            </div>
+            <div class="gallery wide">
+                <div class="gallery-item china">
                     <a target="_blank" href="gallery/hiperson concert.mov">
                         <video src="gallery/hiperson concert.mov" type="video/mov" controls loading="lazy">
                     </a>
@@ -204,6 +231,14 @@
             </div>
             <div class="gallery">
                 <div class="gallery-item china">
+                    <a target="_blank" href="gallery/china flower.JPG">
+                        <img src="gallery/china flower.JPG" type="image/jpg" loading="lazy">
+                    </a>
+                </div>
+                <div class="description">a flower in a temple.</div>
+            </div>
+            <div class="gallery tall">
+                <div class="gallery-item china">
                     <a target="_blank" href="gallery/china awkward.jpg.JPG">
                         <img src="gallery/china awkward.jpg" type="image/jpg" loading="lazy">
                     </a>
@@ -211,6 +246,22 @@
                 <div class="description">yes girl give us awkward!</div>
             </div>
             <div class="gallery">
+                <div class="gallery-item china">
+                    <a target="_blank" href="gallery/china pose.jpg">
+                        <img src="gallery/china pose.jpg" type="image/jpg" loading="lazy">
+                    </a>
+                </div>
+                <div class="description">my poor sister was forced to take so many pictures of me...</div>
+            </div>
+            <div class="gallery">
+                <div class="gallery-item china">
+                    <a target="_blank" href="gallery/china town.jpg">
+                        <img src="gallery/china town.jpg" type="image/jpg" loading="lazy">
+                    </a>
+                </div>
+                <div class="description">more ancient town.</div>
+            </div>
+            <div class="gallery wide">
                 <div class="gallery-item china">
                     <a target="_blank" href="gallery/chongqing panda.mov">
                         <video src="gallery/chongqing panda.mov" type="video/mov" controls loading="lazy">
@@ -234,7 +285,7 @@
                 </div>
                 <div class="description">the chongqing skyline.</div>
             </div>
-            <div class="gallery">
+            <div class="gallery wide">
                 <div class="gallery-item china">
                     <a target="_blank" href="gallery/chongqing building.mov">
                         <video src="gallery/chongqing building.mov" type="video/mov" controls loading="lazy">
@@ -260,6 +311,14 @@
             </div>
             <div class="gallery">
                 <div class="gallery-item china">
+                    <a target="_blank" href="gallery/china teahouse.jpg">
+                        <img src="gallery/china teahouse.jpg" type="image/jpg" loading="lazy">
+                    </a>
+                </div>
+                <div class="description">snacks from a teahouse. the food is just better in china.</div>
+            </div>
+            <div class="gallery wide">
+                <div class="gallery-item china">
                     <a target="_blank" href="gallery/shaoxing building.mov">
                         <video src="gallery/shaoxing building.mov" type="video/mov" controls loading="lazy">
                     </a>
@@ -282,7 +341,7 @@
                 </div>
                 <div class="description">lila once again.</div>
             </div>
-            <div class="gallery">
+            <div class="gallery wide">
                 <div class="gallery-item china">
                     <a target="_blank" href="gallery/walk through shaoxing.mov">
                         <video src="gallery/walk through shaoxing.mov" type="video/mov" controls loading="lazy">
@@ -356,19 +415,19 @@
             </div>
             <div class="gallery">
                 <div class="gallery-item yosemite">
-                    <a target="_blank" href="gallery/yosemite me.jpg">
-                        <img src="gallery/yosemite me.jpg" type="image/jpg" loading="lazy">
-                    </a>
-                </div>
-                <div class="description">me in yosemite or whatever.</div>
-            </div>
-            <div class="gallery">
-                <div class="gallery-item yosemite">
                     <a target="_blank" href="gallery/yosemite mountain.jpg">
                         <img src="gallery/yosemite mountain.jpg" type="image/jpg" loading="lazy">
                     </a>
                 </div>
                 <div class="description">need i say more?</div>
+            </div>
+            <div class="gallery">
+                <div class="gallery-item yosemite">
+                    <a target="_blank" href="gallery/yosemite me.jpg">
+                        <img src="gallery/yosemite me.jpg" type="image/jpg" loading="lazy">
+                    </a>
+                </div>
+                <div class="description">me in yosemite or whatever.</div>
             </div>
             <div class="gallery">
                 <div class="gallery-item yosemite">
@@ -418,7 +477,7 @@
                 </div>
                 <div class="description">played the festival of the arts. we were supposed to be on the mainstage but due to scheduling conflicts we had to move :(</div>
             </div>
-            <div class="gallery">
+            <div class="gallery wide">
                 <div class="gallery-item michigan">
                     <a target="_blank" href="gallery/michigan beach isma.mov">
                         <video src="gallery/michigan beach isma.mov" type="video/mov" controls loading="lazy">
@@ -457,6 +516,14 @@
                     </a>
                 </div>
                 <div class="description">outside a show.</div>
+            </div>
+            <div class="gallery wide">
+                <div class="gallery-item michigan">
+                    <a target="_blank" href="gallery/michigan badminton.mov">
+                        <video src="gallery/michigan badminton.mov" type="video/mov" controls loading="lazy">
+                    </a>
+                </div>
+                <div class="description">we played a lot of badminton this summer.</div>
             </div>
                 
                 

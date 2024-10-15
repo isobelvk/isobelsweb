@@ -180,7 +180,7 @@ const lyrics = [
   "in the dark, i'll let you bite me now",
 
   "help me out, you’ve been fighting far too long",
-  "you scream and shout, for the death of your old dog",
+  "you scream and shout for the death of your old dog",
   "when you said, “i’ll sleep tonight,” the tears ran thick down from your eyes",
   "mom and daddy don’t know why, but i’ll find out",
   "makeup dripped down from the sky, rain in black and petrified",

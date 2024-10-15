@@ -216,7 +216,7 @@ const lyrics = [
   "‘cause i tried to fake it, feelings faded",
   "god, you wear a facade",
   "‘cuz you’re getting dinner company, but your plate here has a lot",
-  "am i worth the mention,ms. intentions?",
+  "am i worth the mention, ms. intentions?",
   "saw in your eyes, a dream, there’s an ocean full of poppies and they're blooming for the other me",
   "didn’t wanna waste them, pluck & break them",
   "hot, it’s too hot",

@@ -1,79 +1,75 @@
 @font-face {
     font-family: pixel;
-    src: url(fonts/px10.ttf)
+    src: url(fonts/px10.ttf);
 }
 
-*{
+* {
     box-sizing: border-box;
 }
-header{
+
+header {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
     align-items: center;
     margin-top: 50px;
-   
-
 }
 
-h1{
+h1 {
     font-family: pixel, 'Courier New', Courier, monospace;
-    color:greenyellow;
+    color: greenyellow;
     font-size: 50px;
-    font-weight:100;
+    font-weight: 100;
     text-shadow: 1px 1px 2px black;
     text-align: center;
-   
 }
 
-h1:hover{
-    transform:scale(1.1)
+h1:hover {
+    transform: scale(1.1);
 }
-h1 a{
-    color:greenyellow;
+
+h1 a {
+    color: greenyellow;
     text-decoration: none;
     padding: 20px;
     display: block;
     text-align: center;
 }
 
-
-.navbar{
+.navbar {
     font-family: pixel, 'Courier New', Courier, monospace;
-    list-style-type:none;
+    list-style-type: none;
     border: solid yellowgreen;
-    border-radius:20px;
+    border-radius: 20px;
     box-shadow: 1px 1px 5px rgb(23, 23, 23);
     text-align: center;
     overflow: hidden;
     justify-content: center;
     margin-bottom: 10px;
-   
 }
-.navbar a{
-    color:greenyellow;
+
+.navbar a {
+    color: greenyellow;
     text-decoration: none;
     padding: 20px;
     display: block;
     text-align: center;
     text-shadow: 1px 1px 2px black;
 }
-.navbar a:hover{
-    background-color: rgba(153, 205, 50, 0.344);
-    transform:scale(1.2)
-}
-.navbar li{
-    float:left;
 
+.navbar a:hover {
+    background-color: rgba(153, 205, 50, 0.344);
+    transform: scale(1.2);
+}
+
+.navbar li {
+    float: left;
 }
 
 @media (max-width: 600px) {
-    
-    .navbar a{
+    .navbar a {
         padding: 5px;
     }
-   
-
 }
 
 .video-bg {
@@ -83,46 +79,37 @@ h1 a{
     left: 0;
     min-width: 100%;
     min-height: 100%;
-
 }
-body{
+
+body {
     font-family: pixel;
-    color:yellowgreen;
+    color: yellowgreen;
     margin-left: 200px;
     margin-right: 200px;
     margin-bottom: 50px;
-
 }
 
 @media (max-width: 1100px) {
-    
-    body{
+    body {
         margin-left: 0px;
         margin-right: 0px;
         margin-bottom: 50px;
     }
-
 }
 
-
-.container{
+.container {
     display: flex;
     flex-direction: row;
     justify-content: center;
-    
-    height:110vh;
+    height: 110vh;
     flex-wrap: wrap;
     overflow: auto;
     gap: 20px;
-    
     margin-left: 5%;
     margin-right: 5%;
-
-    
-
 }
 
-.wrapper{
+.wrapper {
     border: 0px;
     border-radius: 20px;
     color: black;
@@ -131,13 +118,12 @@ body{
     margin-left: 20px;
     margin-right: 20px;
 }
-.menu{
+
+.menu {
     height: auto;
     width: 100%;
-   
-
     font-family: pixel, 'courier new';
-    color:rgb(0, 0, 0);
+    color: rgb(0, 0, 0);
     border: 0px;
     display: flex;
     flex-direction: row;
@@ -151,13 +137,13 @@ body{
     padding-right: 20px;
 }
 
-@media (max-width: 600px){
-    .menu{
+@media (max-width: 600px) {
+    .menu {
         height: 10%;
     }
 }
-.box{
-    
+
+.box {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 10px;
@@ -167,132 +153,121 @@ body{
     width: 100%;
     font-size: 1em;
     font-family: pixel, 'courier new';
-    color:rgb(0, 0, 0);
-    font-weight:100;
+    color: rgb(0, 0, 0);
+    font-weight: 100;
     box-shadow: 1px 1px 5px rgb(23, 23, 23);
     overflow: auto;
     background-color: rgba(0, 0, 0, 0.742);
     background-image: url(images/paper.jpeg);
-    background-repeat:no-repeat;
+    background-repeat: no-repeat;
     background-size: cover;
     padding: 20px;
-    
-
 }
 
-button{
+button {
     height: 40px;
     padding: 10px;
     border-radius: 10px;
     border: 1px solid;
     font-family: pixel;
     font-size: 1em;
-    background: none; 
+    background: none;
 }
-button:hover{
-    transform:scale(1.05);
+
+button:hover {
+    transform: scale(1.05);
     background-color: rgba(224, 224, 224, 0.858);
 }
 
-
-.gallery{
-   
+.gallery {
     border: 1px solid whitesmoke;
     box-shadow: 1px 1px 2px rgb(61, 61, 61);
     border-radius: 5px;
-    padding:10px;
+    padding: 10px;
     background-color: white;
-    margin: 10px auto;;
+    margin: 10px auto;
     width: 100%;
     height: auto;
 }
 
-.wide{
+.wide {
     grid-column: span 2;
 }
 
-.tall{
+.tall {
     grid-row: span 2;
     grid-column: span 2;
-    
 }
 
-
-
 @media (max-width: 600px) {
-   .gallery{
+    .gallery {
         width: 90%;
-   }
-   .box {
-    grid-template-columns: 1fr; 
-    grid-auto-rows: auto; 
-    padding: 10px;
+    }
+    .box {
+        grid-template-columns: 1fr;
+        grid-auto-rows: auto;
+        padding: 10px;
     }
 
     .tall {
-    grid-row-end: span 1; 
-    grid-column: span 1; 
+        grid-row-end: span 1;
+        grid-column: span 1;
     }
 
     .wide {
-    grid-column: span 1;
+        grid-column: span 1;
     }
 }
- 
-    
 
-
-.gallery .description{
+.gallery .description {
     padding: 10px;
     text-align: left;
 }
 
-.gallery:hover{
+.gallery:hover {
     border: 1px solid darkgray;
     transform: rotate(1deg);
 }
 
-.gallery img{
+.gallery img {
     width: 100%;
     height: 100%;
     display: block;
-    
 }
-.gallery video{
+
+.gallery video {
     width: 100%;
     height: auto;
     display: block;
-    
 }
 
-.box:hover{
-    transform:scale(1.01);
+.box:hover {
+    transform: scale(1.01);
     margin-left: 1px;
     margin-right: 1px;
 }
 
-
-
-footer{
+footer {
     font-family: pixel, 'courier new';
-    color:greenyellow;
+    color: greenyellow;
     font-size: small;
-    font-weight:100;
+    font-weight: 100;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
     align-items: center;
     padding: 20px;
     text-shadow: 1px 1px 2px black;
-    
 }
-footer a{
-     color:greenyellow;
-     text-decoration: none;
-     padding: 20px;
-     display: block;
-     text-align: center;
+
+footer a {
+    color: greenyellow;
+    text-decoration: none;
+    padding: 20px;
+    display: block;
+    text-align: center;
 }
-footer a:hover{
-    transform:scale(1.05);
+
+footer a:hover {
+    transform: scale(1.05);
 }

@@ -273,7 +273,9 @@ pre{
     font-style: regular;
 }
 
-
+audio{
+    height: 30px;
+}
 
 .hero{
     min-height: 100%;

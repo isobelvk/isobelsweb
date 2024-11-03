@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>sign up</title>
+    <link rel="icon" type="image/png" href="images/screaming.png">
+    <link rel="stylesheet" href="sign up.css">
+    <script src="https://kit.fontawesome.com/4b29de4817.js" crossorigin="anonymous"></script>
+     <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XTG7N5BXPM"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-XTG7N5BXPM');
+    </script>
+</head>
+<body>
+    <header>
+        <h1><a href="home.html">sign up ˖◛⁺⑅♡</a></h1>
+        <nav class="navbar" id="computer">
+          
+                <div><a href="home.html">home</a></div>
+                <div><a href="songs.html">songs</a></div>
+                <div><a href="about.html">about</a></div>
+                <div><a href="contact.html">contact</a></div>
+                <div><a href="sign up.html">sign up</a></div>
+                <div><a href="shop.html">shop</a></div>
+                <div><a href="gallery.html">photobook</a></div>
+        </nav>
+        
+    </header>
+        <video autoplay muted loop src="bg-videos/fish.mp4" type="video/mp4" class="video-bg" playsinline>
+        </video>
+    
+        <div class="newsletter">
+            <h2>join my mailing list!</h2>
+            <hr color="yellowgreen">
+            <p>share your email for updates on music, shows, merch, and other cool things i'm working on :)</p>
+            <form name="submit-to-google-sheet">
+                <input type="email" name="Email" placeholder="email" required>
+                <br><br>
+                <button type="submit">submit</button>
+            </form>
+            <span id="msg"></span>
+        </div>
+
+
+        <script>
+            const scriptURL = 'https://script.google.com/macros/s/AKfycbyJkra9ykCiFjToNAV3czNEl_l4cpLbKQ1lKxGuCHPGekFBQHN8slk-mZKD1RRE-nA-/exec'
+            const form = document.forms['submit-to-google-sheet']
+            const msg = document.getElementById("msg")
+
+            form.addEventListener('submit', e => {
+              e.preventDefault()
+              fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+                .then(response => {
+                    msg.innerHTML = "<i>thx for subscribing!</i>"
+                    setTimeout(function(){
+                        msg.innerHTML = ""
+                    },5000)
+                    form.reset()
+                })
+                .catch(error => console.error('Error!', error.message))
+            })
+        </script>
+
+
+
+
+    <footer>        
+        <a href="https://www.instagram.com/isobelvee/" target="_blank">
+            <i class="fa-brands fa-instagram fa-2x"></i>
+        </a>
+        <a href="https://x.com/isobelvk_" target="_blank">
+            <i class="fa-brands fa-x-twitter fa-2x"></i>
+        </a>
+        <a href="https://www.tiktok.com/@isobelvee" target="_blank">
+            <i class="fa-brands fa-tiktok fa-2x"></i>
+        </a>
+    </footer>
+    
+
+    
+    
+</body>
+</html>

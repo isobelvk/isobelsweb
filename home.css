@@ -1,4 +1,5 @@
 
+
 @font-face {
     font-family:sixtyfour-convergence;
     src: url(fonts/SixtyfourConvergence-Regular.ttf);
@@ -35,6 +36,7 @@ main{
     margin: 0px;
 }
 
+
 .container{
     display: flex;
     flex-direction: row;
@@ -62,6 +64,8 @@ main{
     overflow: auto;
     margin-top: 20px;
 }
+
+
 
 .box:hover{
     transform:scale(1.01);
@@ -207,14 +211,17 @@ h1 a{
 
 .navbar{
     font-family: pixel, 'Courier New', Courier, monospace;
-    list-style-type:none;
+    list-style-type: none;
     border: solid yellowgreen;
-    border-radius:20px;
+    border-radius: 20px;
     box-shadow: 1px 1px 5px rgb(23, 23, 23);
     text-align: center;
     overflow: hidden;
+    display: flex;
+    flex-direction: row;
     justify-content: center;
-    margin-bottom: 10px;
+    flex-wrap: wrap;
+    
    
 }
 .navbar a{
@@ -224,26 +231,30 @@ h1 a{
     display: block;
     text-align: center;
     text-shadow: 1px 1px 2px black;
+    flex: 1;
 }
 .navbar a:hover{
     background-color: rgba(153, 205, 50, 0.344);
     transform:scale(1.2)
 }
-.navbar li{
-    float:left;
 
-}
 
-@media (max-width: 600px) {
+@media (max-width: 700px) {
     
     .navbar a{
-        padding: 5px;
+        padding: 10px;
     }
     body{
         margin-left: 20px;
         margin-right: 20px;
     }
+      
+}
 
+@media (max-width: 600px){
+    .navbar {
+        width: 80%;
+    }
 }
 
 h4{
@@ -313,3 +324,4 @@ footer a{
 footer a:hover{
     transform:scale(1.05);
 }
+

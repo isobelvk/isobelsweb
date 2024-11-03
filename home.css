@@ -65,8 +65,6 @@ main{
     margin-top: 20px;
 }
 
-
-
 .box:hover{
     transform:scale(1.01);
     margin-left: 1px;

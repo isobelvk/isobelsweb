@@ -176,7 +176,7 @@ h1 a{
 
 @media (max-width: 600px){
     .navbar {
-        width: 80%;
+        width: 75%;
     }
 }
 @media (max-width: 600px) {

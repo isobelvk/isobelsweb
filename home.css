@@ -102,11 +102,12 @@ audio[controls]{
 #box2 a{
     display: block;
     color:yellowgreen;
-    border: solid;
+    box-shadow: 1px 1px 5px rgb(23, 23, 23);
     border-width: 1.5px;
-    border-radius: 10px;
+    margin-left: 5px;
+    margin-right: 5px;
     text-decoration: none;
-    padding: 10px;
+    
     text-align: center;
     
 

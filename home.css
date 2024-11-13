@@ -103,11 +103,9 @@ audio[controls]{
     display: block;
     color:yellowgreen;
     box-shadow: 1px 1px 5px rgb(23, 23, 23);
-    border-width: 1.5px;
     margin-left: 5px;
     margin-right: 5px;
     text-decoration: none;
-    
     text-align: center;
     
 

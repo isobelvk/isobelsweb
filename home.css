@@ -89,7 +89,6 @@ audio[controls]{
 #box2{
    
     background-color: rgba(255, 192, 203, 0.469);
-    
     padding: 20px;
     overflow: hidden;
     flex-grow: 4;

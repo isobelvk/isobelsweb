@@ -21,7 +21,6 @@
 }
 body{
     background-color: black;
-    margin: 75px;
 }
 
 .parent{
@@ -156,5 +155,6 @@ pre{
 }
 
 #box7{
-    margin-left: 300px;
+    margin: auto;
+    text-align: center;
 }

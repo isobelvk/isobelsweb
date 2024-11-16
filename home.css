@@ -102,8 +102,7 @@ audio[controls]{
     display: block;
     color:yellowgreen;
     box-shadow: 1px 1px 5px rgb(23, 23, 23);
-    margin-left: 5px;
-    margin-right: 5px;
+    margin: 5px;
     text-decoration: none;
     text-align: center;
     

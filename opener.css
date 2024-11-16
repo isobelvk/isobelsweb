@@ -11,10 +11,24 @@ body{
     background-repeat: no-repeat;
     background-position: center;
     background-attachment: fixed;
-    background-size: cover;
-   
+    background-size: 100%;
    
     
+}
+
+@media (max-width: 600px){
+    body{
+        background-color: black;
+        font-family: pixel, 'Courier New', Courier, monospace;
+        color:greenyellow;
+        background-image: url(images/web\ art\ 22.jpg);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-attachment: fixed;
+        background-size: 100%;
+       
+        
+    }
 }
 
 h1{

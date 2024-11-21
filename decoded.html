@@ -20,21 +20,27 @@
     
 <body>
     <header>
-        <h1 href="home.html">laundry decoded &lt;/&gt;</h1>
-        <nav class="navbar">
-            <u1>
-                <li><a href="home.html">home</a></li>
-                <li><a href="songs.html">songs</a></li>
-                <li><a href="about.html">about</a></li>
-                <li><a href="contact.html">contact</a></li>
-                <li><a href="gallery.html">photobook</a></li>
-            </u1>
-        </nav>
+        <h1 href="home.html">decoded &lt;/&gt;</h1>
+        <nav class="navbar" id="computer">  
+            <div><a href="home.html">home</a></div>
+            <div><a href="songs.html">songs</a></div>
+            <div><a href="about.html">about</a></div>
+            <div><a href="contact.html">contact</a></div>
+            <div><a href="sign up.html">sign up</a></div>
+            <div><a href="shop.html">shop</a></div>
+            <div><a href="gallery.html">photobook</a></div>
+    </nav>
     </header>
+    <video autoplay muted loop src="bg-videos/paper background.mp4" poster="images/paper crumpled.avif" type="video/mp4" class="video-bg" playsinline>
+    </video>
+    <main>
+    <div class="container1">
     
-    <div class="container">
+    <!--laundry -->
+    <div class="song-item laundry">
         <!-- chorus -->
         <div class="lyric-container">
+            <h2>laundry</h2>
             <b>[chorus]</b> 
             <span class="lyric" onclick="toggleAnnotation('annotation1')">
                 <mark>time has been passing by me <br>
@@ -146,16 +152,69 @@
         </div>
     </div>
 
+     <!-- hot shit -->
+     <div class="song-item hot-shit">
+        <div class="lyric-container">
+            <h2>hot shit</h2>
+            <div>coming soon...</div>
+        </div>
+    </div>
+
+    <!-- i'd do -->
+    <div class="song-item id-do">
+        <div class="lyric-container">
+            <h2>i'd do</h2>
+            <div>coming soon...</div>
+        </div>
+    </div>
+
+    <!-- ghost -->
+    <div class="song-item ghost">
+        <div class="lyric-container">
+            <h2>i'm in love with a ghost</h2>
+            <div>coming soon...</div>
+        </div>
+    </div>
+
+    <!-- aubrey -->
+    <div class="song-item aubrey">
+        <div class="lyric-container">
+            <h2>aubrey</h2>
+            <div>coming soon...</div>
+        </div>
+    </div>
+</div>
+
+
+    </div>
+
+
+    <div class="container2">
+            <div class="menu">
+                <h3 style="color: cornflowerblue;"><i>boyish</i></h3>
+                <button class="filter-btn active" onclick="filterSelection('all')">all</button>
+                <button class="filter-btn" onclick="filterSelection('laundry')">laundry</button>
+                <button class="filter-btn" onclick="filterSelection('hot-shit')">hot shit</button>
+                <button class="filter-btn" onclick="filterSelection('id-do')">i'd do</button>
+                <button class="filter-btn" onclick="filterSelection('ghost')">i'm in love with a ghost</button>
+                <button class="filter-btn" onclick="filterSelection('aubrey')">aubrey</button>
+            </div>
+    </div>
+    </main>
+
     <!-- footer -->
-    <footer>
+    <footer>       
         <a href="https://www.instagram.com/isobelvee/" target="_blank">
             <i class="fa-brands fa-instagram fa-2x"></i>
         </a>
-        <a href="https://x.com/isobelvk_" target="_blank">
-            <i class="fa-brands fa-x-twitter fa-2x"></i>
-        </a>
         <a href="https://www.tiktok.com/@isobelvee" target="_blank">
             <i class="fa-brands fa-tiktok fa-2x"></i>
+        </a>
+        <a href="https://www.youtube.com/@isobelsweb" target="_blank">
+            <i class="fa-brands fa-youtube fa-2x"></i>
+        </a>
+        <a href="https://x.com/isobelvk_" target="_blank">
+            <i class="fa-brands fa-x-twitter fa-2x"></i>
         </a>
     </footer>
 

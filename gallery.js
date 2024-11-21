@@ -1,3 +1,5 @@
+
+
 function filterSelection(location) {
     var items = document.getElementsByClassName('gallery-item');
     var buttons = document.getElementsByClassName('filter-btn');

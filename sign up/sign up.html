@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>sign up</title>
+    <link rel="icon" type="image/png" href="images/screaming.png">
+    <link rel="stylesheet" href="sign up.css"/>
+    <script src="https://kit.fontawesome.com/4b29de4817.js" crossorigin="anonymous"></script>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XTG7N5BXPM"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-XTG7N5BXPM');
+    </script>
+</head>
+<body>
+    <header>
+        <h1><a href="../home/home.html">sign up ˖◛⁺⑅♡</a></h1>
+        <nav class="navbar" id="computer">
+            <div><a href="../home/home.html">home</a></div>
+            <div><a href="../songs/songs.html">songs</a></div>
+            <div><a href="../about/about.html">about</a></div>
+            <div><a href="../contact/contact.html">contact</a></div>
+            <div><a href="../sign up/sign up.html">sign up</a></div>
+            <div><a href="../shop/shop.html">shop</a></div>
+            <div><a href="../photobook/gallery.html">photobook</a></div>
+            <div><a href="../blog/blog.html">blog</a></div>
+        </nav>
+    </header>
+
+    <video autoplay muted loop src="../bg-videos/fish.mp4" poster="backup-photos/fish backup.jpg" type="video/mp4" class="video-bg" playsinline></video>
+    
+    <div class="newsletter">
+        <h2>join my mailing list!</h2>
+        <hr color="yellowgreen">
+        <p>share your email and city for updates on music, shows, merch, and other cool things i'm working on :)</p>
+        <form name="submit-to-google-sheet">
+            <input type="email" name="Email" placeholder="email" required>
+            <br><br>
+            <input type="text" id="location" name="Location" placeholder="your city" required autocomplete="off">
+            <div id="autocomplete-results" class="autocomplete-results"></div> 
+            <button type="submit">submit</button>
+        </form>
+        <span id="msg"></span>
+    </div>
+
+    <script>
+        const API_KEY = '76db7a995fa341f2ab867d0e2a9c62ec'; 
+        const locationInput = document.getElementById('location');
+        const autocompleteResults = document.getElementById('autocomplete-results');
+        const form = document.forms['submit-to-google-sheet'];
+        const msg = document.getElementById("msg");
+
+        
+        const fetchLocationSuggestions = async (query) => {
+            if (query.length < 3) {
+                autocompleteResults.innerHTML = ''; 
+                return;
+            }
+
+            try {
+                const response = await fetch(`https://api.opencagedata.com/geocode/v1/json?q=${query}&key=${API_KEY}`);
+                const data = await response.json();
+
+                if (data.results.length > 0) {
+                    const suggestions = data.results.map(result => {
+                        return {
+                            formatted: result.formatted,
+                            lat: result.geometry.lat,
+                            lng: result.geometry.lng
+                        };
+                    });
+
+                    displaySuggestions(suggestions);
+                } else {
+                    autocompleteResults.innerHTML = '<p>No results found.</p>';
+                }
+            } catch (error) {
+                console.error('Error fetching location data:', error);
+            }
+        };
+
+        
+        const displaySuggestions = (suggestions) => {
+            autocompleteResults.innerHTML = ''; 
+
+            suggestions.forEach(suggestion => {
+                const div = document.createElement('div');
+                div.textContent = suggestion.formatted;
+                div.classList.add('autocomplete-item');
+                div.addEventListener('click', () => selectSuggestion(suggestion));
+                autocompleteResults.appendChild(div);
+            });
+        };
+
+        
+        const selectSuggestion = (suggestion) => {
+            locationInput.value = suggestion.formatted;
+            autocompleteResults.innerHTML = ''; 
+        };
+
+        
+        locationInput.addEventListener('input', (e) => {
+            const query = e.target.value;
+            fetchLocationSuggestions(query);
+        });
+
+       
+        form.addEventListener('submit', (e) => {
+            e.preventDefault();
+            fetch('https://script.google.com/macros/s/AKfycbyJkra9ykCiFjToNAV3czNEl_l4cpLbKQ1lKxGuCHPGekFBQHN8slk-mZKD1RRE-nA-/exec', {
+                method: 'POST',
+                body: new FormData(form)
+            })
+            .then(response => {
+                msg.innerHTML = "<i>thx for subscribing!</i>";
+                setTimeout(() => {
+                    msg.innerHTML = "";
+                }, 5000);
+                form.reset();
+            })
+            .catch(error => console.error('Error!', error.message));
+        });
+    </script>
+
+    <footer>
+        <a href="https://www.instagram.com/isobelvee/" target="_blank">
+            <i class="fa-brands fa-instagram fa-2x"></i>
+        </a>
+        <a href="https://www.tiktok.com/@isobelvee" target="_blank">
+            <i class="fa-brands fa-tiktok fa-2x"></i>
+        </a>
+        <a href="https://www.youtube.com/@isobelsweb" target="_blank">
+            <i class="fa-brands fa-youtube fa-2x"></i>
+        </a>
+        <a href="https://x.com/isobelvk_" target="_blank">
+            <i class="fa-brands fa-x-twitter fa-2x"></i>
+        </a>
+    </footer>
+</body>
+</html>

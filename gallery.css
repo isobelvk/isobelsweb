@@ -72,17 +72,13 @@ h1 a {
         padding: 10px;
     }
     main{
-        margin-left: 20px;
-        margin-right: 20px;
+        margin-left: 10px;
+        margin-right: 10px;
     }
       
 }
 
-@media (max-width: 600px){
-    .navbar {
-        width: 70%;
-    }
-}
+
 
 .video-bg {
     position: fixed;
@@ -283,4 +279,10 @@ footer a {
 
 footer a:hover {
     transform: scale(1.05);
+}
+
+@media (max-width: 600px){
+    .navbar {
+        width: 80%;
+    }
 }

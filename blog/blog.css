@@ -80,7 +80,7 @@ main{
 }
 .box{
     display: block;
-    background-color: rgba(0, 0, 0, 0.942);
+    background-color: rgba(0, 0, 0, 0.811);
     font-family: pixel;
     color: yellowgreen;
     padding: 20px;
@@ -129,6 +129,9 @@ hr{
 @media (max-width: 600px){
     .navbar {
         width: 70%;
+    }
+    main{
+        height: 150vh;
     }
 }
 

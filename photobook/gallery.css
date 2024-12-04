@@ -7,6 +7,10 @@
     box-sizing: border-box;
 }
 
+main{
+    height: 130vh;
+}
+
 header {
     display: flex;
     flex-wrap: wrap;
@@ -113,7 +117,7 @@ main{
     justify-content: center;
     height: 110vh;
     flex-wrap: wrap;
-    overflow: auto;
+    
     gap: 20px;
     margin: 5%;
 }
@@ -158,7 +162,7 @@ main{
     gap: 10px;
     border: 0px;
     border-radius: 20px;
-    height: 100vh;
+    height: 110vh;
     width: 100%;
     font-size: 1em;
     font-family: pixel, 'courier new';
@@ -285,4 +289,5 @@ footer a:hover {
     .navbar {
         width: 80%;
     }
+    
 }

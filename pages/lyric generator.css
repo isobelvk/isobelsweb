@@ -1,0 +1,168 @@
+@font-face {
+    font-family: pixel;
+    src: url(../fonts/px10.ttf)
+}
+
+body{
+    font-family: pixel;
+    color:black;
+    margin: 0px;
+}
+
+header{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+    
+
+   
+
+}
+
+h1{
+    font-family: pixel, 'Courier New', Courier, monospace;
+    color: white;
+    font-size: 50px;
+    font-weight:100;
+    text-shadow: 1px 1px 2px black;
+    text-align: center;
+}
+
+h1:hover{
+    transform:scale(1.1)
+}
+h1 a{
+    color:white;
+    text-decoration: none;
+   
+    display: block;
+    text-align: center;
+}
+
+
+.navbar{
+    font-family: pixel, 'Courier New', Courier, monospace;
+    list-style-type: none;
+    border: solid rgb(255, 255, 255);
+    border-radius: 20px;
+    box-shadow: 1px 1px 5px rgb(23, 23, 23);
+    text-align: center;
+    overflow: hidden;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-bottom: 10px;
+    
+   
+}
+.navbar a{
+    color:rgb(255, 255, 255);
+    text-decoration: none;
+    padding: 20px;
+    display: block;
+    text-align: center;
+    text-shadow: 1px 1px 2px black;
+    flex: 1;
+}
+.navbar a:hover{
+    background-color: rgba(250, 250, 250, 0.252);
+    transform:scale(1.2)
+}
+
+
+@media (max-width: 800px) {
+    
+    .navbar a{
+        padding: 10px;
+    }
+      
+}
+
+@media (max-width: 600px){
+    .navbar {
+        width: 70%;
+    }
+}
+#container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100vh;
+    
+    text-align: center;
+    text-shadow: .5px .5px 1px rgba(88, 88, 88, 0.488);
+    font-size: 25px;
+}
+    
+.video-bg {
+    position: fixed;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    min-width: 100%;
+    min-height: 100%;
+
+}
+
+#button{
+    padding-left: 75px;
+    padding-right: 75px;
+    height: 50px;
+    font-size: 25px;
+    font-family: pixel;
+    border-radius: 20px;
+    background-color: rgba(247, 247, 247, 0);
+    box-shadow: 1px 1px 5px rgba(88, 88, 88, 0.488);
+    text-shadow: 1px 1px 5px rgba(88, 88, 88, 0.488);
+    color: white;
+    border-color: white;
+    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.824);
+}
+#button:hover{
+    background-color: rgba(255, 255, 255, 0.601);
+    transform:scale(1.1)
+}
+
+
+#lyric-box{
+    padding-left: 10px;
+    padding-right: 10px;
+    color: white;
+    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.824);
+}
+
+
+
+
+
+footer{
+    font-family: pixel, 'courier new';
+    color:white;
+    
+    font-size: small;
+    font-weight:100;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 20px;
+    text-shadow: 1px 1px 2px black;
+    
+    
+    
+}
+footer a{
+     color:white;
+     text-decoration: none;
+     padding: 20px;
+     display: block;
+     text-align: center;
+}
+footer a:hover{
+    transform:scale(1.05);
+}
+

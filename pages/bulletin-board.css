@@ -1,0 +1,147 @@
+@font-face {
+    font-family: pixel;
+    src: url(../fonts/px10.ttf)
+}
+
+
+
+body{
+    background-image: url(../images/bulletin-board.jpg);
+   
+    
+    font-family: pixel;
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.145);
+}
+
+header{
+    text-align: center;
+}
+
+main{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: space-evenly;
+
+}
+
+.note{
+    width: 100px;
+    text-align: center;
+    flex-grow: 1;
+    
+
+}
+
+#note-middle a{
+    display: block;
+    color:yellowgreen;
+    box-shadow: 1px 1px 5px rgb(23, 23, 23);
+    margin: 5px;
+    text-decoration: none;
+    text-align: center;
+    
+
+}
+.note a:hover{
+    transform:scale(1.02)
+}
+
+#note-middle:hover{
+    transform: rotate(2deg);
+}
+#note-left:hover{
+    transform: rotate(-2deg);
+}
+#note-right:hover{
+    transform: rotate(2deg);
+   
+}
+
+.counter a{
+    box-shadow: none;
+}
+
+#note-left{
+    padding: 5px;
+    background-image: url(../images/graph\ paper.jpg);
+    border-radius: 5px;
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.514);
+    
+    background-position: top;
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+    
+}
+#note-middle{
+    padding: 5px;
+    background-image: url(../images/yellowpaper.jpg);
+    border-radius: 5px;
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.514);
+   
+    background-position: top;
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+    
+    
+    
+}
+#note-right{
+    padding: 5px;
+    background-image: url(../images/paper.jpeg);
+    border-radius: 5px;
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.514);
+   
+    background-position: top;
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+    
+}
+
+ul {
+    list-style: none;
+    align-items: center;
+    padding: 0;
+}
+
+.gif-container {
+    position: relative;
+    display: inline-block;
+    
+  }
+  
+  .tooltip {
+    visibility: hidden;
+    background-color: rgba(0, 0, 0, 0.8);
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.632);
+    color: #fff;
+    text-align: center;
+    border-radius: 5px;
+    padding: 5px;
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    white-space: nowrap;
+    z-index: 999;
+    opacity: 0;
+    transition: opacity 0.3s;
+    font-size: 14px;
+    
+  }
+  
+  .gif-container:hover .tooltip {
+    visibility: visible;
+    opacity: 1;
+  }
+  
+  .tooltip a {
+    color: plum; 
+    text-decoration: none;
+  }
+  
+  .tooltip a:hover {
+    text-decoration: underline;
+  }
+  

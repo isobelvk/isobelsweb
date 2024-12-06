@@ -2,19 +2,46 @@
     font-family: pixel;
     src: url(../fonts/px10.ttf)
 }
+html{ 
+    cursor: url(../images/spider6.png), auto;
+    height: 100%;
+}
 
 
 
 body{
-    background-image: url(../images/bulletin-board.jpg);
-   
+    background-image: url(../images/cork.png);
+
     
     font-family: pixel;
-    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.145);
 }
+
+a{
+    color:brown;
+    text-decoration: none;
+}
+
+
+#gear a:hover {
+    transform: scale(1.1);
+    transition: transform 0.3s ease;
+}
+
+
+#gear {
+    display: inline-block; 
+}
+
+
+#gear a:hover {
+    text-decoration: none; 
+}
+
+
 
 header{
     text-align: center;
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.145);
 }
 
 main{
@@ -45,7 +72,7 @@ main{
 
 }
 .note a:hover{
-    transform:scale(1.02)
+    transform:scale(1.01)
 }
 
 #note-middle:hover{

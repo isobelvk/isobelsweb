@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+    <title>lie la</title>
+    <link rel="icon" type="image/png" href="../images/screaming.png">
+        <link rel="stylesheet" href="lila.css">
+        <script src="https://kit.fontawesome.com/4b29de4817.js" crossorigin="anonymous"></script>
+         <!-- Google tag (gtag.js) -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-XTG7N5BXPM"></script>
+        <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-XTG7N5BXPM');
+        </script>
+    <script type="text/javascript">
+        // <![CDATA[
+        var colour="gold"; // in addition to "random" can be set to any valid colour eg "#f0f" or "red"
+        var sparkles=50;
+        
+        /****************************
+        *  Tinkerbell Magic Sparkle *
+        *(c)2005-13 mf2fm web-design*
+        *  http://www.mf2fm.com/rv  *
+        * DON'T EDIT BELOW THIS BOX *
+        ****************************/
+        var x=ox=400;
+        var y=oy=300;
+        var swide=800;
+        var shigh=600;
+        var sleft=sdown=0;
+        var tiny=new Array();
+        var star=new Array();
+        var starv=new Array();
+        var starx=new Array();
+        var stary=new Array();
+        var tinyx=new Array();
+        var tinyy=new Array();
+        var tinyv=new Array();
+        
+        window.onload=function() { if (document.getElementById) {
+          var i, rats, rlef, rdow;
+          for (var i=0; i<sparkles; i++) {
+            var rats=createDiv(3, 3);
+            rats.style.visibility="hidden";
+            rats.style.zIndex="999";
+            document.body.appendChild(tiny[i]=rats);
+            starv[i]=0;
+            tinyv[i]=0;
+            var rats=createDiv(5, 5);
+            rats.style.backgroundColor="transparent";
+            rats.style.visibility="hidden";
+            rats.style.zIndex="999";
+            var rlef=createDiv(1, 5);
+            var rdow=createDiv(5, 1);
+            rats.appendChild(rlef);
+            rats.appendChild(rdow);
+            rlef.style.top="2px";
+            rlef.style.left="0px";
+            rdow.style.top="0px";
+            rdow.style.left="2px";
+            document.body.appendChild(star[i]=rats);
+          }
+          set_width();
+          sparkle();
+        }}
+        
+        function sparkle() {
+          var c;
+          if (Math.abs(x-ox)>1 || Math.abs(y-oy)>1) {
+            ox=x;
+            oy=y;
+            for (c=0; c<sparkles; c++) if (!starv[c]) {
+              star[c].style.left=(starx[c]=x)+"px";
+              star[c].style.top=(stary[c]=y+1)+"px";
+              star[c].style.clip="rect(0px, 5px, 5px, 0px)";
+              star[c].childNodes[0].style.backgroundColor=star[c].childNodes[1].style.backgroundColor=(colour=="random")?newColour():colour;
+              star[c].style.visibility="visible";
+              starv[c]=50;
+              break;
+            }
+          }
+          for (c=0; c<sparkles; c++) {
+            if (starv[c]) update_star(c);
+            if (tinyv[c]) update_tiny(c);
+          }
+          setTimeout("sparkle()", 40);
+        }
+        
+        function update_star(i) {
+          if (--starv[i]==25) star[i].style.clip="rect(1px, 4px, 4px, 1px)";
+          if (starv[i]) {
+            stary[i]+=1+Math.random()*3;
+            starx[i]+=(i%5-2)/5;
+            if (stary[i]<shigh+sdown) {
+              star[i].style.top=stary[i]+"px";
+              star[i].style.left=starx[i]+"px";
+            }
+            else {
+              star[i].style.visibility="hidden";
+              starv[i]=0;
+              return;
+            }
+          }
+          else {
+            tinyv[i]=50;
+            tiny[i].style.top=(tinyy[i]=stary[i])+"px";
+            tiny[i].style.left=(tinyx[i]=starx[i])+"px";
+            tiny[i].style.width="2px";
+            tiny[i].style.height="2px";
+            tiny[i].style.backgroundColor=star[i].childNodes[0].style.backgroundColor;
+            star[i].style.visibility="hidden";
+            tiny[i].style.visibility="visible"
+          }
+        }
+        
+        function update_tiny(i) {
+          if (--tinyv[i]==25) {
+            tiny[i].style.width="1px";
+            tiny[i].style.height="1px";
+          }
+          if (tinyv[i]) {
+            tinyy[i]+=1+Math.random()*3;
+            tinyx[i]+=(i%5-2)/5;
+            if (tinyy[i]<shigh+sdown) {
+              tiny[i].style.top=tinyy[i]+"px";
+              tiny[i].style.left=tinyx[i]+"px";
+            }
+            else {
+              tiny[i].style.visibility="hidden";
+              tinyv[i]=0;
+              return;
+            }
+          }
+          else tiny[i].style.visibility="hidden";
+        }
+        
+        document.onmousemove=mouse;
+        function mouse(e) {
+          if (e) {
+            y=e.pageY;
+            x=e.pageX;
+          }
+          else {
+            set_scroll();
+            y=event.y+sdown;
+            x=event.x+sleft;
+          }
+        }
+        
+        window.onscroll=set_scroll;
+        function set_scroll() {
+          if (typeof(self.pageYOffset)=='number') {
+            sdown=self.pageYOffset;
+            sleft=self.pageXOffset;
+          }
+          else if (document.body && (document.body.scrollTop || document.body.scrollLeft)) {
+            sdown=document.body.scrollTop;
+            sleft=document.body.scrollLeft;
+          }
+          else if (document.documentElement && (document.documentElement.scrollTop || document.documentElement.scrollLeft)) {
+            sleft=document.documentElement.scrollLeft;
+            sdown=document.documentElement.scrollTop;
+          }
+          else {
+            sdown=0;
+            sleft=0;
+          }
+        }
+        
+        window.onresize=set_width;
+        function set_width() {
+          var sw_min=999999;
+          var sh_min=999999;
+          if (document.documentElement && document.documentElement.clientWidth) {
+            if (document.documentElement.clientWidth>0) sw_min=document.documentElement.clientWidth;
+            if (document.documentElement.clientHeight>0) sh_min=document.documentElement.clientHeight;
+          }
+          if (typeof(self.innerWidth)=='number' && self.innerWidth) {
+            if (self.innerWidth>0 && self.innerWidth<sw_min) sw_min=self.innerWidth;
+            if (self.innerHeight>0 && self.innerHeight<sh_min) sh_min=self.innerHeight;
+          }
+          if (document.body.clientWidth) {
+            if (document.body.clientWidth>0 && document.body.clientWidth<sw_min) sw_min=document.body.clientWidth;
+            if (document.body.clientHeight>0 && document.body.clientHeight<sh_min) sh_min=document.body.clientHeight;
+          }
+          if (sw_min==999999 || sh_min==999999) {
+            sw_min=800;
+            sh_min=600;
+          }
+          swide=sw_min;
+          shigh=sh_min;
+        }
+        
+        function createDiv(height, width) {
+          var div=document.createElement("div");
+          div.style.position="absolute";
+          div.style.height=height+"px";
+          div.style.width=width+"px";
+          div.style.overflow="hidden";
+          return (div);
+        }
+        
+        function newColour() {
+          var c=new Array();
+          c[0]=255;
+          c[1]=Math.floor(Math.random()*256);
+          c[2]=Math.floor(Math.random()*(256-c[1]/2));
+          c.sort(function(){return (0.5 - Math.random());});
+          return ("rgb("+c[0]+", "+c[1]+", "+c[2]+")");
+        }
+        // ]]>
+        </script>
+
+
+</head>
+<body>
+    <header>
+        <h1><a href="home.html">lila ᡣ𐭩 •｡ꪆৎ ˚⋅</a></h1>
+            <nav class="navbar" id="computer">
+                        <div><a href="home.html">home</a></div>
+                        <div><a href="songs.html">songs</a></div>
+                        <div><a href="about.html">about</a></div>
+                        <div><a href="contact.html">contact</a></div>
+                        <div><a href="sign up.html">sign up</a></div>
+                        <div><a href="shop.html">shop</a></div>
+                        <div><a href="gallery.html">photobook</a></div>
+                        <div><a href="blog.html">blog</a></div>
+            </nav>          
+    </header>
+    
+    <main>
+        <div class="box">
+            <div class="flex1">
+            
+              <div class="container" id="background">
+                <div class="wrapper">
+                    <img src="../images/lilapinkshanghai Medium.jpeg">
+                    <img src="../images/proflilamyspace.jpeg">
+                    <img src="../images/proflilaroof.jpeg">
+                    <img src="../images/proflilaselfie.jpeg">
+                    <img src="../images/proflilarock.jpeg">
+                    <img src="../images/proflilahat.jpeg">
+                </div>
+              </div>
+           
+            <div>
+                <h4>
+                    @lilaheart
+                    <br>
+                    <u>name:</u> <span style="color: hotpink;">𝓁𝒾𝓁𝒶</span>
+                    <br>
+                    <u>age:</u> 15
+                    <br>
+                    <i>is listening to...</i>
+                    <iframe width="100%" height="125" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1839735612&color=%23ffc0cb&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"></iframe><div style="font-size: 10px; color: #cccccc;line-break: anywhere;word-break: normal;overflow: hidden;white-space: nowrap;text-overflow: ellipsis; font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;font-weight: 100;"><a href="https://soundcloud.com/charlixcx" title="charlixcx" target="_blank" style="color: #cccccc; text-decoration: none;">charlixcx</a> · <a href="https://soundcloud.com/charlixcx/mean-girls" title="Mean girls" target="_blank" style="color: #cccccc; text-decoration: none;">mean girls</a></div>
+                    <br>
+                    <u>lila mood:</u> BORED😐
+                    <br>
+                    ☼: virgo
+                    <br>
+                    ☾: aquarius
+                    <br>
+                    ↑: leo
+                    <br>
+                    <u>favorite colors:</u> <p style="color:hotpink; display: inline;">pink</p>
+                    <br>
+                    also i loveeee badminton an im so good at it 😛
+                    <br>
+                    <u>things i like:</u> sleeping, go outside, creativity, coconut redbull, sushi, shopping, travel, laughing, music, hamzahthefantastic
+                    <br>
+                    <u>things i don't like:</u> um like a lot
+                    <br><br>
+                    <img class="gif" src="../gifs/minion-kevin-butt-minions.gif">
+                    <img class="gif" src="../gifs/redpanda3.gif">
+                    <img class="gif" src="../gifs/minion2.gif">
+                    
+                    
+
+
+
+                </h4>
+
+            </div>
+
+
+            </div>
+           <div class="writing">
+                <h2>
+                    about meeee ꨄ
+                    <img class="minions" src="../gifs/minions-coquette-unscreen.gif">
+                    <img class="minions" id="guitar" src="../gifs/pinkguitar.gif">
+                    <img class="minions" id="cat" src="../gifs/pixelcat.gif">
+                </h2>
+                <p>
+                    haiiii :3. my name lila. i like minions and 2 play guitar. i wanna b a fashion designer. i just wanna do good in school and follow my dreams. i love clothes. i love nails. i love accessories. im like isobel but girlier and betterer. i jus wanna take pictures and have fun all day. i love my cat. but she bit me ‹/3. i love nature and spelling. i want to be a spelling bee 🐝.
+                    
+                    
+                
+                </p>
+                <h3>
+                    <i>
+                    follow my instagram plsss <a target="_blank" class="ig" href="https://www.instagram.com/lilavankuiken/">@lilavankuiken</a>
+                    </i>
+                </h3>
+                <div class="border">
+                    <img src="../gifs/flower2.gif">
+                    <img src="../gifs/flower.gif">
+                    <img src="../gifs/flower2.gif">
+                    <img src="../gifs/flower.gif">
+                    <img src="../gifs/flower2.gif">
+                    <img src="../gifs/flower.gif">
+                    <img src="../gifs/flower2.gif">
+                    <img src="../gifs/flower.gif">
+                    <img src="../gifs/flower2.gif">
+                </div>
+                <br>
+                <div class="holder">
+                    <div class="fav">
+                      𝓪𝓻𝓽𝓲𝓼𝓽𝓼 
+                      <br>
+                        lana del rey, between friends, pinkpantheress, charli xcx, mila degray, unflirt, feeble little horse, dominic fike, bakar, beabadoobee, unflirt, isobel
+
+                    </div>
+                    <div class="fav">
+                        𝔂𝓸𝓾𝓽𝓾𝓫𝓮𝓻𝓼
+                        <br>
+                        emergency intercom,  slushy noobz/out of character, ha sisters, jennxpenn, sinjin drowning, jubilee
+                    </div>
+                        
+                    <div class="fav">
+                        𝓶𝓸𝓿𝓲𝓮𝓼
+                        <br>
+                        bodies bodies bodies, the substance, dídí, palo alto
+                    </div>
+                        
+                    <div class="fav">
+                        𝓰𝓪𝓶𝓮𝓼
+                        <br>
+                        sims, minecraft, chilla's art, unpacking, zelda 
+                    </div>
+                </div>
+                <script async src="https://talk.hyvor.com/embed/embed.js" type="module"></script>
+<hyvor-talk-comments
+	website-id="12263"
+	page-id=""
+></hyvor-talk-comments>
+                
+
+               </div>
+
+
+           
+              
+                    
+        </div>
+
+
+    </main>
+
+    <footer>
+                
+        <a href="https://www.instagram.com/isobelvee/" target="_blank">
+            <i class="fa-brands fa-instagram fa-2x"></i>
+        </a>
+        <a href="https://www.tiktok.com/@isobelvee" target="_blank">
+            <i class="fa-brands fa-tiktok fa-2x"></i>
+        </a>
+        <a href="https://www.youtube.com/@isobelsweb" target="_blank">
+            <i class="fa-brands fa-youtube fa-2x"></i>
+        </a>
+        <a href="https://x.com/isobelvk_" target="_blank">
+            <i class="fa-brands fa-x-twitter fa-2x"></i>
+        </a>
+        
+    </footer>
+
+
+</body>
+</html>

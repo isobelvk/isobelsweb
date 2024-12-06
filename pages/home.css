@@ -5,7 +5,7 @@
 }
 
 html{ 
-    cursor: url(../images/spider\ cursor.png), auto;
+    cursor: url(../images/spider6.png), auto;
     height: 100%;
 }
 
@@ -138,7 +138,9 @@ audio[controls]{
 
 }
 
-
+#updatebox{
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.531);
+}
 
 
 #hub:hover{

@@ -25,6 +25,11 @@ body{
 
 
 }
+
+p{
+    display: inline
+}
+
 a{
     color:yellowgreen;
     
@@ -39,13 +44,7 @@ header{
 
 }
 
-p{
-    display: inline
-}
 
-h4{
-    font-size: large;
-}
 h1{
     font-family: pixel, 'Courier New', Courier, monospace;
     color:greenyellow;
@@ -53,6 +52,7 @@ h1{
     font-weight:100;
     text-shadow: 1px 1px 2px black;
     text-align: center;
+    transition: transform 0.3s;
 }
 
 h1:hover{
@@ -61,7 +61,7 @@ h1:hover{
 h1 a{
     color:greenyellow;
     text-decoration: none;
-    padding: 20px;
+   
     display: block;
     text-align: center;
 }
@@ -90,6 +90,7 @@ h1 a{
     text-align: center;
     text-shadow: 1px 1px 2px black;
     flex: 1;
+    transition: transform 0.3s;
 }
 .navbar a:hover{
     background-color: rgba(153, 205, 50, 0.344);
@@ -147,6 +148,7 @@ section{
     background-color: rgba(0, 0, 0, 0.742);
     justify-content: center;
     padding: 20px;
+    transition: transform 0.1s;
     
 
 }

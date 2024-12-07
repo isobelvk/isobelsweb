@@ -90,6 +90,10 @@ main{
     box-shadow: none;
 }
 
+.note{
+    transition: transform 0.1s;
+}
+
 #note-left{
     padding: 5px;
     background-image: url(../images/graph\ paper.jpg);

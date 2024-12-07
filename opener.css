@@ -53,6 +53,7 @@ a{
     padding: 20px;
     display: block;
     text-align: center;
+    transition: transform 0.3s;
 }
 
 a:hover{

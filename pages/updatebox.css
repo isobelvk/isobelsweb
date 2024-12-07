@@ -59,18 +59,24 @@ header{
     padding:0px;
     margin: 0px;
     text-align: center;
-    text-shadow: .5px .5px .5px black;
-    
-
-    
+    text-shadow: .5px .5px .5px black; 
 }
 a{
     text-decoration: none;
     color:yellowgreen;
+    
+    
 }
-a :hover{
-    transform:scale(1.1)
+
+
+header h2 {
+    transition: color 0.3s ease, transform 0.3s ease; 
 }
+
+header h2:hover {
+    transform: scale(1.2); 
+}
+
 
 p{
     display: inline;

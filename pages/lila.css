@@ -5,76 +5,34 @@
 }
 
 
+
 body{
     background-color: pink;
     background-image: url(../gifs/sakura.gif);
     background-size: cover;
     background-repeat: no-repeat;
-    font-family: pixel;
-    
 }
 
-header{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
-    align-items: center;
-    margin-top: 50px;
-   
-
+main{
+    color: black !important;
 }
 
 
-h1{
-    font-family: pixel, 'Courier New', Courier, monospace;
-    color:white;
-    font-size: 50px;
-    font-weight:100;
-    text-shadow: 1px 1px 2px black;
-    text-align: center;
-    transition: transform 0.3s;
-}
 
-h1:hover{
-    transform:scale(1.1)
-}
+
 h1 a{
-    color:white;
-    text-decoration: none;
-   
-    display: block;
-    text-align: center;
+    color:white !important;
 }
 
 
 .navbar{
-    font-family: pixel, 'Courier New', Courier, monospace;
-    list-style-type: none;
-    border: solid white;
-    border-radius: 20px;
-    box-shadow: 1px 1px 5px rgb(23, 23, 23);
-    text-align: center;
-    overflow: hidden;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    flex-wrap: wrap;
-    
-   
+    border: solid white !important;
 }
 .navbar a{
-    color:white;
-    text-decoration: none;
-    padding: 20px;
-    display: block;
-    text-align: center;
-    text-shadow: 1px 1px 2px black;
-    flex: 1;
-    transition: transform 0.3s;
+    color:white !important;
 }
 .navbar a:hover{
-    background-color: rgba(255, 192, 203, 0.482);
-    transform:scale(1.2)
+    background-color: rgba(255, 192, 203, 0.482) !important;
 }
 main{
     display: flex;
@@ -82,8 +40,6 @@ main{
     align-items: center;
     flex-direction: column;
 }
-
-
 
 .ig {
     display: inline-block;
@@ -285,38 +241,9 @@ img{
 
 
 
-
-
-footer{
-    font-family: pixel, 'courier new';
-    color:whitesmoke;
-    font-size: small;
-    font-weight:100;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
-    align-items: center;
-    padding: 20px;
-    text-shadow: 1px 1px 2px black;
-    
-}
-footer a{
-     color:whitesmoke;
-     text-decoration: none;
-     padding: 20px;
-     display: block;
-     text-align: center;
-}
-footer a:hover{
-    transform:scale(1.05);
-}
-
-
 @media (max-width: 800px) {
     
-    .navbar a{
-        padding: 10px;
-    }
+  
     .flex1{
         width: 100%;
     }
@@ -326,10 +253,6 @@ footer a:hover{
 
 
 @media (max-width: 600px){
-    .navbar {
-        width: 80%;
-    }
-
     .box{
         flex-direction: column;
         align-items: center;

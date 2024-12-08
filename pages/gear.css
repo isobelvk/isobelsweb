@@ -121,7 +121,7 @@ main {
     border-radius: 5px;
     padding: 5px;
     position: absolute;
-    top: 10px;
+    top: -50px;
     left: 50%;
     transform: translateX(-50%);
     white-space: normal;
@@ -131,6 +131,11 @@ main {
     min-width: 132px;
 }
 
+img {
+    max-width: 100%;
+    height: auto;
+    object-fit: contain;  /* Ensure image doesn't get stretched */
+}
 /* Tooltip Hover Effect */
 .png-holder:hover .info {
     visibility: visible;

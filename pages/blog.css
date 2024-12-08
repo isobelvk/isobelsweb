@@ -3,72 +3,6 @@
     src: url(../fonts/px10.ttf)
 }
 
-header{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
-    align-items: center;
-    margin-top: 50px;
-   
-
-}
-
-
-h1{
-    font-family: pixel, 'Courier New', Courier, monospace;
-    color:greenyellow;
-    font-size: 50px;
-    font-weight:100;
-    text-shadow: 1px 1px 2px black;
-    text-align: center;
-    transition: transform 0.1s;
-}
-
-h1:hover{
-    transform:scale(1.1)
-}
-h1 a{
-    color:greenyellow;
-    text-decoration: none;
-   
-    display: block;
-    text-align: center;
-}
-
-
-.navbar{
-    font-family: pixel, 'Courier New', Courier, monospace;
-    list-style-type: none;
-    border: solid yellowgreen;
-    border-radius: 20px;
-    box-shadow: 1px 1px 5px rgb(23, 23, 23);
-    text-align: center;
-    overflow: hidden;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    flex-wrap: wrap;
-    
-   
-}
-.navbar a{
-    color:greenyellow;
-    text-decoration: none;
-    padding: 20px;
-    display: block;
-    text-align: center;
-    text-shadow: 1px 1px 2px black;
-    flex: 1;
-    transition: transform 0.3s;
-}
-.navbar a:hover{
-    background-color: rgba(153, 205, 50, 0.344);
-    transform:scale(1.2)
-}
-
-
-
-
 
 
 main{
@@ -84,8 +18,6 @@ main{
 .box{
     display: block;
     background-color: rgba(0, 0, 0, 0.811);
-    font-family: pixel;
-    color: yellowgreen;
     padding: 20px;
     border-radius: 20px;
     box-shadow: 1px 1px 5px black;
@@ -106,42 +38,6 @@ hr{
     border-color: yellowgreen;
 }
 
-
-
-@media (max-width: 1000px){
-    main{
-        margin-left: 50px;
-        margin-right: 50px;
-    }
-}
-
-@media (max-width: 800px) {
-    
-    .navbar a{
-        padding: 10px;
-    }
-      
-}
-@media (max-width: 600px){
-    .navbar {
-        width: 80%;
-    }
-    main{
-        margin: 20px;
-        margin-left: 20px;
-        margin-right: 20px;
-        flex-direction: column;
-    }
-}
-@media (max-width: 600px){
-    .navbar {
-        width: 70%;
-    }
-    main{
-        height: 150vh;
-    }
-}
-
 a{
     color:goldenrod;
 }
@@ -149,7 +45,7 @@ a{
 #index{
     flex-grow: 2;
     text-align: center;
-    height: 45%;
+    height: 50%;
     
     
 }
@@ -179,37 +75,131 @@ button:hover {
     background-color: rgba(153, 205, 50, 0.494);
 }
 
-
-
-.video-bg {
-    position: fixed;
-    z-index: -1;
-    top: 0;
-    left: 0;
-    min-width: 100%;
-    min-height: 100%;
-
-}
-footer{
-    font-family: pixel, 'courier new';
-    color:yellowgreen;
-    font-size: small;
-    font-weight:100;
+.flex{
     display: flex;
+    flex-direction: row;
     flex-wrap: wrap;
-    justify-content: space-evenly;
+    justify-content: center;
     align-items: center;
+    text-align: center;
+}
+
+.lyrics{
     padding: 20px;
-    text-shadow: 1px 1px 2px black;
-    
 }
-footer a{
-     color:yellowgreen;
-     text-decoration: none;
-     padding: 20px;
-     display: block;
-     text-align: center;
+
+
+
+
+.container{
+    max-width: 200px;
+    max-height: 200px;
+    position: relative;
+    float: left;
+    overflow: hidden;
+    margin: 0 20px 15px 0;
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.817);
+    border-radius: 10px;
 }
-footer a:hover{
-    transform:scale(1.05);
+
+#spotify{
+    opacity: 80%;
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.667);
+    width: 60%
 }
+
+.cover{
+    display: flex;
+    justify-content: center;
+}
+
+.wrapper{
+    width: 100%;
+    display: flex;
+    animation: slide 30s infinite;
+}
+
+@keyframes slide{
+    0%{
+        transform: translateX(0);
+    }
+    5%{
+        transform: translateX(0);
+    }
+    10%{
+        transform: translateX(-100%);
+    }
+    15%{
+        transform: translateX(-100%);
+    }
+    20%{
+        transform: translateX(-200%);
+    }
+    25%{
+        transform: translateX(-200%);
+    }
+    30%{
+        transform: translateX(-300%);
+    }
+    35%{
+        transform: translateX(-300%)
+    }
+    40%{
+        transform: translate(-400%);
+    }
+    45%{
+        transform: translate(-400%);
+    }
+    50%{
+        transform: translate(-500%);
+    }
+    55%{
+        transform: translate(-500%);
+    }
+    60%{
+        transform: translate(0);
+    }
+    65%{
+        transform: translate(0);
+    }
+    70%{
+        transform: translate(0);
+    }
+    75%{
+        transform: translate(0);
+    }
+    80%{
+        transform: translate(0);
+    }
+    95%{
+        transform: translate(0);
+    }
+    100%{
+        transform: translate(0);
+    }
+
+}
+
+img{
+    width: 100%;
+}
+@media (max-width: 1000px){
+    main{
+        margin-left: 50px;
+        margin-right: 50px;
+    }
+}
+
+   
+
+@media (max-width: 600px){
+
+    main{
+        margin: 20px !important;
+        margin-left: 20px !important;
+        margin-right: 20px;
+        flex-direction: column;
+        height: 150vh;
+    }
+}
+

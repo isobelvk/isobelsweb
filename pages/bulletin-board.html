@@ -213,19 +213,33 @@
 
     </header>
     <main>
+      
         <div class="note" id="note-left">
             
+            
+          <h4>you are unique visitor number...</h4>
+              
+          <div id="sfck3294r2p9fds47sjksbhn7m3wfxksmdc"></div>
+          <script type="text/javascript" src="https://counter6.optistats.ovh/private/counter.js?c=k3294r2p9fds47sjksbhn7m3wfxksmdc&down=async" async></script>
+          
+          <!--
             <h4>you are unique visitor number... </h4>
                 <div class="counter">
                     <div id="sfc4zkm5gbb33s6tu3mmeawdb5l22u447f4" style="text-align: center;"></div>
                     <script type="text/javascript" src="https://counter6.optistats.ovh/private/counter.js?c=4zkm5gbb33s6tu3mmeawdb5l22u447f4&down=async" async></script>
                 </div>
+              -->
             <div class="gif-container">
                 <img src="../gifs/youngtama.gif" width="75px">
                 <span class="tooltip">
                     gif by <a target="_blank" href="https://joejoefashosho.neocities.org/zones/tamagotchi/media/">joejoefashosho</a>
                 </span>
             </div>
+            
+
+            
+
+            
         </div>
 
         <div class="note" id="note-middle">
@@ -243,23 +257,58 @@
             <h4>to do :p</h4>
                 <ul>
                                          
-                    <li><s>create bulletin board</s></li>
-                    <li><s>create <a target="_blank" id="gear" href="gear.html" style="text-decoration: line-through; text-decoration-color: black;">gear page</a></s></li>
-                    <li>add easter eggs</li>
-                    <li>write songs</li>
-                    <li>clean up code</li>
-                    <li>debug</li>
-                   
                     
-
-                
+                    <li><s>create <a target="_blank" id="gear" href="gear.html" style="text-decoration: line-through; text-decoration-color: black;">gear page</a></s></li>
+                    <li>check out my <a target="_blank" id="gear" href="vinyl.html">vinyls</a></li>
+                    <li>read<a target="_blank" id="gear" href="recommendations.html">recommendations</a></li>
+                    <li><s>clean up code</s></li>
+                    <li>write songs</li>
+                    <li><s>debug</s></li>
                 </ul>
+               
+                <br>
+            </div>
+        <div class="note" id="note-below">
+          <h4>isobel is listening to...</h4>
+          <div class="header__inner">
+            
+            <div class="image-container">
+              <img id="album-art" alt="album art" style="max-width: 75px; display: none;" />
+            </div>
+            <p>
+              <span id="song">&#8987;</span>
+            </p>
+          </div>
+
+          <script type="text/javascript">
+            let user = 'isobelvk';
+            let url = 'https://lastfm-last-played.biancarosa.com.br/' + user + '/latest-song';
+            let song = document.querySelector('#song');
+            let albumArt = document.querySelector('#album-art');
+
+            fetch(url)
+              .then(response => response.json())
+              .then(json => {
+                const trackName = json['track']['name'];
+                const artistName = json['track']['artist']['#text'];
+                const imageUrl = json['track']['image'].pop()['#text']; // Gets the largest image available
+
+                song.innerHTML = `${trackName} - ${artistName}`;
                 
+                if (imageUrl) {
+                  albumArt.src = imageUrl;
+                  albumArt.style.display = 'block'; // Show the album art only if an image URL is available
+                }
+              })
+              .catch(error => {
+                console.error('Error fetching the song data:', error);
+                song.innerHTML = 'Unable to load the song';
+              });
+          </script>
+          
+
 
         </div>
-        
-
-
     </main>
 
 

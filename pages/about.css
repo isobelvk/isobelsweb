@@ -1,9 +1,7 @@
-
 @font-face {
     font-family: pixel;
     src: url(../fonts/px10.ttf)
 }
-
 p{
     display: inline
 }
@@ -64,5 +62,42 @@ section{
     
 }
 
+.gif-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px
+}
 
+main{
+    margin-left: 200px;
+    margin-right: 200px;
+}
+
+@media (max-width: 1400px){
+    main{
+        margin-left: 100px;
+        margin-right: 100px;
+    }
+ 
+}
+@media (max-width: 1000px){
+    main{
+        margin-left: 50px;
+        margin-right: 50px;
+    }
+ 
+}
+
+   
+
+@media (max-width: 600px){
+
+    main{
+        margin-left: 20px ;
+        margin-right: 20px;
+       
+    }
+   
+}
 

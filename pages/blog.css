@@ -1,15 +1,14 @@
+
 @font-face {
     font-family: pixel;
     src: url(../fonts/px10.ttf)
 }
 
-
-
 main{
     margin-top: 30px;
     margin-bottom: 30px;
-    margin-left: 150px;
-    margin-right: 150px;
+    margin-left: 300px;
+    margin-right: 300px;
     display: flex;
     flex-direction: row;
     gap: 10px;
@@ -45,7 +44,7 @@ a{
 #index{
     flex-grow: 2;
     text-align: center;
-    height: 50%;
+    height: 55%;
     
     
 }
@@ -183,10 +182,23 @@ button:hover {
 img{
     width: 100%;
 }
+
+@media (max-width: 1400px){
+    main{
+        margin-left: 100px;
+        margin-right: 100px;
+    }
+    #spotify{
+        width: 100%;
+    }
+}
 @media (max-width: 1000px){
     main{
         margin-left: 50px;
         margin-right: 50px;
+    }
+    #spotify{
+        width: 100%;
     }
 }
 
@@ -201,5 +213,6 @@ img{
         flex-direction: column;
         height: 150vh;
     }
+   
 }
 

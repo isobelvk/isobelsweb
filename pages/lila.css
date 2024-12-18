@@ -3,9 +3,6 @@
     font-family: pixel;
     src: url(../fonts/px10.ttf)
 }
-
-
-
 body{
     background-color: pink;
     background-image: url(../gifs/sakura.gif);
@@ -79,7 +76,8 @@ main{
     border-radius: 20px;
     box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.371);
     flex-grow: 1; 
-    width: 50%
+    width: 50%;
+    height: fit-content;
     
 
 }

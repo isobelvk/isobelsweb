@@ -1,8 +1,7 @@
 @font-face {
     font-family: pixel;
-    src: url(../fonts/px10.ttf);
+    src: url(../fonts/px10.ttf)
 }
-
 main{
     height: 130vh;
 }

@@ -1,0 +1,21 @@
+body{
+    background-image: url(../gifs/room2.gif);
+    background-size: cover;
+}
+
+*{
+    color: white !important;
+}
+
+.navbar{
+    border: solid white !important;
+}
+
+.plant{
+    display: flex;
+    justify-content: center;
+}
+
+.plant img{
+   
+}

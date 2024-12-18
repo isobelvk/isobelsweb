@@ -1,9 +1,8 @@
+
 @font-face {
     font-family: pixel;
     src: url(../fonts/px10.ttf)
 }
-
-
 *{
     margin: 0;
     padding: 0;
@@ -69,7 +68,7 @@ h1 a{
     background-color: whitesmoke;
     justify-content: center;
     padding: 40px;
-    height: 100vh;
+    height: auto;
     overflow: auto;
     
 
@@ -85,13 +84,6 @@ h1 a{
     height: 50%;    
 }
 
-.profile-pic{
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    box-shadow: 1px 1px 3px rgb(23, 23, 23);
-    border-radius: 10px;
-}
 
 audio{
     width: 100%;
@@ -105,6 +97,90 @@ audio{
 }
 footer a{
      color:whitesmoke !important;
+}
+.image-container{
+    max-width: 100%;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.817);
+    border-radius: 10px;
+    margin: 0 auto; /* Centers horizontally */
+    display: block;
+    
+
+}
+
+
+
+.wrapper{
+    width: 100%;
+    display: flex;
+    animation: slide 30s infinite;
+}
+
+@keyframes slide{
+    0%{
+        transform: translateX(0);
+    }
+    5%{
+        transform: translateX(0);
+    }
+    10%{
+        transform: translateX(-100%);
+    }
+    15%{
+        transform: translateX(-100%);
+    }
+    20%{
+        transform: translateX(-200%);
+    }
+    25%{
+        transform: translateX(-200%);
+    }
+    30%{
+        transform: translateX(-300%);
+    }
+    35%{
+        transform: translateX(-300%)
+    }
+    40%{
+        transform: translate(-400%);
+    }
+    45%{
+        transform: translate(-400%);
+    }
+    50%{
+        transform: translate(-500%);
+    }
+    55%{
+        transform: translate(-500%);
+    }
+    60%{
+        transform: translate(0);
+    }
+    65%{
+        transform: translate(0);
+    }
+    70%{
+        transform: translate(0);
+    }
+    75%{
+        transform: translate(0);
+    }
+    80%{
+        transform: translate(0);
+    }
+    95%{
+        transform: translate(0);
+    }
+    100%{
+        transform: translate(0);
+    }
+
+}
+
+.image-container img{
+    width: 100%;
 }
 
 @media (max-width: 600px) {

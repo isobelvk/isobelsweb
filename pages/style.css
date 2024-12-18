@@ -1,3 +1,7 @@
+@font-face {
+    font-family: pixel;
+    src: url(../fonts/px10.ttf)
+}
 
 *{
     box-sizing: border-box;

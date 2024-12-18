@@ -1,8 +1,8 @@
-
 @font-face {
     font-family: pixel;
     src: url(../fonts/px10.ttf)
 }
+
 html{ 
     cursor: url(../images/spider6.png), auto;
     height: 100%;

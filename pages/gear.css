@@ -1,6 +1,6 @@
 @font-face {
     font-family: pixel;
-    src: url(../fonts/px10.ttf);
+    src: url(../fonts/px10.ttf)
 }
 
 body {
@@ -193,7 +193,7 @@ footer a:hover {
     }
 
     .box {
-        max-width: 80%;
+        max-width: 100%;
     }
 
     .png-holder img {
